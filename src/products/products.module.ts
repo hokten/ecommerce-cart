@@ -4,6 +4,7 @@ import { ProductsService } from './products.service';
 
 @Module({
   controllers: [ProductsController],
-  providers: [ProductsService]
+  providers: [ProductsService],
+  exports: [ProductsService], // ⭐ ÖNEMLİ: Cart servisi kullanacak
 })
 export class ProductsModule {}
